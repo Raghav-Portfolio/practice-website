@@ -5,21 +5,19 @@ Before running the script, make sure you've set up 2 - Step Authentication from 
 and then copy the app password using password manager in Google, if you're using Google
 """
 
-host = 'smtp.gmail.com'
-port = 465
+def send_email(message):
+    host = 'smtp.gmail.com'
+    port = 465
 
-username = ''
-password = ''
-receiver = ''
-
-context = ssl.create_default_context()
-
-message = """\
-Subject: Hi!
-How are you?
-Bye
-"""
-
-with smtplib.SMTP_SSL(host, port, context= context) as server:
-    server.login(username, password)
-    server.sendmail(username, receiver, message)
+    username = '******'
+    password = '*****'
+    receiver = '*****'
+    context = ssl.create_default_context()
+   
+    
+    with smtplib.SMTP_SSL(host, port, context= context) as server:
+        server.login(username, password)
+        server.sendmail(username, receiver, message)
+    
+if __name__ == '__main__':
+    send_email()
