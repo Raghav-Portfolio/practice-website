@@ -22,7 +22,7 @@ with col1:
         name = f"{row['first name']} {row['last name']}"
         st.subheader(name.title())
         st.write(row['role'])
-        st.image('C:/Users/1000490/Desktop/Python/Projects/practice_website/images/' + row['image'])
+        st.image('/images/' + row['image'])
     
    
         
@@ -33,7 +33,7 @@ with col2:
         st.subheader(name.title())
         #st.header(row['first name'].capitalize() + ' ' + row['last name'].capitalize())
         st.write(row['role'])
-        st.image('C:/Users/1000490/Desktop/Python/Projects/practice_website/images/' + row['image'])
+        st.image('/images/' + row['image'])
         
 with col3:
     for index,row in df[8:].iterrows():
@@ -41,4 +41,4 @@ with col3:
         st.subheader(name.title())
         #st.header(row['first name'].capitalize() + ' ' + row['last name'].capitalize())
         st.write(row['role'])
-        st.image('C:/Users/1000490/Desktop/Python/Projects/practice_website/images/' + row['image'])
+        st.image('/images/' + row['image'])
