@@ -15,7 +15,7 @@ st.write(content)
 
 col1, col2, col3 = st.columns(3)
 
-df=pd.read_csv('C:/Users/1000490/Desktop/Python/Projects/practice_website/data.csv')
+df=pd.read_csv('data.csv')
 
 with col1:
    for index,row in df[:4].iterrows():
